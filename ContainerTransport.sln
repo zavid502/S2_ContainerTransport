@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerTransport", "ContainerTransport\ContainerTransport.csproj", "{9FD5DE67-BA37-4882-A3D3-C7E670C691DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleContainer", "ConsoleContainer\ConsoleContainer.csproj", "{76081580-2DE5-4ADB-B21E-F6A025F50333}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{9FD5DE67-BA37-4882-A3D3-C7E670C691DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FD5DE67-BA37-4882-A3D3-C7E670C691DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FD5DE67-BA37-4882-A3D3-C7E670C691DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76081580-2DE5-4ADB-B21E-F6A025F50333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76081580-2DE5-4ADB-B21E-F6A025F50333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76081580-2DE5-4ADB-B21E-F6A025F50333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76081580-2DE5-4ADB-B21E-F6A025F50333}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
