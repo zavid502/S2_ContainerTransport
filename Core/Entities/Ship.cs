@@ -12,6 +12,6 @@ public class Ship
 
     public Grid Grid { get; init; } = new Grid()
     {
-        
-    }
+
+    };
 }
