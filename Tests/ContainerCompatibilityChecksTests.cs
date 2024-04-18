@@ -6,7 +6,7 @@ namespace Tests;
 public class Tests
 {
     [Test]
-    public void ContainersAboveOverflow_WithoutWeightOverflow_ReturnsFalse()
+    public void ContainerCanSupportWeight_WithoutWeightOverflow_ReturnsTrue()
     {
         List<Container> containers = [
             new Container(),
@@ -17,11 +17,11 @@ public class Tests
 
         var aboveOverflow = ContainerCompatibilityChecks.ContainerCanSupportWeight(containers, 2);
         
-        Assert.That(aboveOverflow, Is.False);
+        Assert.That(aboveOverflow, Is.True);
     }
 
     [Test]
-    public void ContainersAboveOverflow_WithWeightOverflow_ReturnsTrue()
+    public void ContainerCanSupportWeight_WithWeightOverflow_ReturnsFalse()
     {
         List<Container> containers = [
             new Container(),
@@ -31,7 +31,7 @@ public class Tests
 
         var aboveOverflow = ContainerCompatibilityChecks.ContainerCanSupportWeight(containers, 2);
         
-        Assert.That(aboveOverflow, Is.True);
+        Assert.That(aboveOverflow, Is.False);
     }
 
     [Test]
