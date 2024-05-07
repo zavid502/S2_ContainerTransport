@@ -1,6 +1,9 @@
-﻿namespace Core.Entities;
+﻿using System.ComponentModel;
+using IContainer = Core.Interfaces.IContainer;
 
-public class Container
+namespace Core.Entities;
+
+public class Container : IContainer
 {
     public Container(bool cooled = false, bool valuable = false, int contentWeight = 5000, int maxWeightOnTop = 120000)
     {
@@ -14,7 +17,7 @@ public class Container
 
     public bool Valuable { get; private set; }
 
-    private int ContentWeight { get; set; }
+    public int ContentWeight { get; set; }
 
     public int CombinedWeight => this.ContentWeight + this.ContainerWeight;
 
@@ -22,6 +25,6 @@ public class Container
 
     public int MaxWeightOnTop { get; private set; }
 
-    private int ContainerWeight { get; set; } = 4000;
+    public int ContainerWeight { get; set; } = 4000;
 
 }
