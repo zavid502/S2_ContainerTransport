@@ -1,5 +1,6 @@
 using Business;
 using Core.Entities;
+using Core.Interfaces;
 
 namespace Tests;
 
@@ -8,7 +9,7 @@ public class Tests
     [Test]
     public void ContainerCanSupportWeight_WithoutWeightOverflow_ReturnsTrue()
     {
-        List<Container> containers = [
+        List<IContainer> containers = [
             new Container(),
             new Container(),
             new Container(),
@@ -23,7 +24,7 @@ public class Tests
     [Test]
     public void ContainerCanSupportWeight_WithWeightOverflow_ReturnsFalse()
     {
-        List<Container> containers = [
+        List<IContainer> containers = [
             new Container(),
             new Container(),
             new Container(false, false, 120000),
@@ -37,7 +38,7 @@ public class Tests
     [Test]
     public void WeightCompatible_WithContainerAddResultingInOverflow_ReturnsFalse()
     {
-        List<Container> containers = [
+        List<IContainer> containers = [
             new Container(),
             new Container(false, false, 30000),
             new Container(false, false, 30000),
@@ -54,7 +55,7 @@ public class Tests
     [Test]
     public void WeightCompatible_WithContainerAddNotResultingInOverflow_ReturnsTrue()
     {
-        List<Container> containers = [
+        List<IContainer> containers = [
             new Container(),
             new Container(false, false, 30000),
             new Container(false, false, 30000),

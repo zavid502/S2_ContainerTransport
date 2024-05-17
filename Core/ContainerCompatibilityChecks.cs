@@ -1,10 +1,11 @@
 using Core.Entities;
+using Core.Interfaces;
 
 namespace Business;
 
 public static class ContainerCompatibilityChecks
 {
-    public static bool ContainerCanSupportWeight(IList<Container> containers, int containerToCheck)
+    public static bool ContainerCanSupportWeight(IList<IContainer> containers, int containerToCheck)
     {
         var toTake = containers.Count - containerToCheck;
         if (toTake <= 0)
@@ -20,7 +21,7 @@ public static class ContainerCompatibilityChecks
         return !weightOverflow;
     }
     
-    public static bool WeightCompatible(IList<Container> containers, Container containerToAdd)
+    public static bool WeightCompatible(IList<IContainer> containers, IContainer containerToAdd)
     {
         containers.Add(containerToAdd);
 
